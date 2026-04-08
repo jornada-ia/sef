@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jornada de Inteligência Artificial SEF/SC</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#313030",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f3f0ef",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#2300e9",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-tint": "#4139ff",
+                    "background": "#fcf9f8",
+                    "primary-fixed": "#e2dfff",
+                    "outline": "#767589",
+                    "on-secondary-fixed": "#110069",
+                    "on-tertiary-fixed": "#3f0300",
+                    "surface-container-highest": "#e5e2e1",
+                    "tertiary": "#730a00",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#fcf9f8",
+                    "tertiary-fixed-dim": "#ffb4a6",
+                    "on-tertiary-container": "#ffab9b",
+                    "on-background": "#1b1b1b",
+                    "secondary": "#4f46d2",
+                    "on-secondary-container": "#fffbff",
+                    "on-surface": "#1b1b1b",
+                    "on-secondary": "#ffffff",
+                    "primary": "#1b00bd",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "secondary-container": "#6961ec",
+                    "on-primary-fixed": "#0a006b",
+                    "on-tertiary-fixed-variant": "#900f00",
+                    "surface-variant": "#e5e2e1",
+                    "surface-container": "#f0eded",
+                    "surface-bright": "#fcf9f8",
+                    "outline-variant": "#c6c4db",
+                    "tertiary-fixed": "#ffdad4",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed-variant": "#392bbc",
+                    "primary-fixed-dim": "#c1c1ff",
+                    "primary-container": "#2800ff",
+                    "secondary-fixed": "#e3dfff",
+                    "inverse-primary": "#c1c1ff",
+                    "secondary-fixed-dim": "#c4c0ff",
+                    "on-primary-container": "#babaff",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "on-surface-variant": "#454558",
+                    "surface-dim": "#dcd9d9",
+                    "tertiary-container": "#9e1100"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "0.75rem",
+                    "xl": "1rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* GitHub Animated Background Effects */
+        .github-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0d1117;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 0%, rgba(40, 0, 255, 0.15) 0%, rgba(40, 0, 255, 0.05) 40%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-grid-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(ellipse at 50% 0%, black 20%, transparent 70%);
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #2800ff;
+            border-radius: 50%;
+            filter: blur(1px);
+            animation: float 20s infinite linear;
+            opacity: 0;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% { transform: translateY(-100vh) translateX(20vw); opacity: 0; }
+        }
+
+        /* Section Stacking & Parallax */
+        .section-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .section-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .parallax-wrap {
+            position: relative;
+            z-index: 10;
+        }
+
+        .sticky-stack {
+            position: sticky;
+            top: 0;
+        }
+        
+        .no-line { border: none !important; }
+        .tonal-depth { background-color: rgba(252, 249, 248, 0.8); backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-white overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-outline-variant/20 transition-all duration-300">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-extrabold text-primary tracking-tighter">
+            SEF/SC
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-headline text-sm font-bold tracking-wider uppercase text-on-surface hover:text-primary transition-colors" href="#sobre">Sobre</a>
+<a class="font-headline text-sm font-bold tracking-wider uppercase text-on-surface hover:text-primary transition-colors" href="#trilhas">Trilhas</a>
+<a class="font-headline text-sm font-bold tracking-wider uppercase text-on-surface hover:text-primary transition-colors" href="#calendario">Calendário</a>
+<a class="font-headline text-sm font-bold tracking-wider uppercase text-on-surface hover:text-primary transition-colors" href="#faq">FAQ</a>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded-lg font-headline text-sm font-bold uppercase tracking-wider hover:bg-primary-container transition-all active:scale-95">
+            Inscreva-se
+        </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden" id="hero">
+<div class="github-hero-bg">
+<div class="hero-glow"></div>
+<div class="hero-grid-pattern"></div>
+<!-- Particles generated via JS -->
+<div id="particles-container"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-10">
+<div class="inline-flex items-center gap-2 font-headline text-xs font-bold tracking-[0.25em] uppercase text-primary-container bg-primary-container/10 px-4 py-1.5 rounded-full border border-primary-container/20">
+<span class="w-2 h-2 bg-primary-container rounded-full animate-pulse"></span>
+                Inovação Pública
+            </div>
+<h1 class="font-headline text-white text-5xl md:text-[5.5rem] font-extrabold leading-[1.1] tracking-tighter">
+                Jornada de <span class="text-primary-fixed-dim">IA</span> <span class="block">SEF/SC</span>
+</h1>
+<p class="text-white/70 text-xl md:text-2xl leading-relaxed max-w-xl font-light">
+                Domine a Inteligência Artificial para transformar a gestão pública catarinense. Capacitação de alto nível exclusiva para servidores.
+            </p>
+<div class="flex flex-wrap gap-6 pt-4">
+<button class="bg-primary-container text-white px-10 py-5 rounded-xl font-headline font-bold text-lg hover:shadow-[0_0_30px_rgba(40,0,255,0.4)] hover:-translate-y-1 transition-all flex items-center gap-3">
+                    GARANTIR MINHA VAGA
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="hidden md:block">
+<div class="bg-white/5 backdrop-blur-2xl p-10 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-center gap-4 mb-8">
+<div class="w-14 h-14 rounded-2xl bg-primary-container flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white text-3xl">psychology</span>
+</div>
+<div>
+<h4 class="text-white text-lg font-bold">Capacitação 2026</h4>
+<p class="text-primary-fixed-dim text-sm font-medium">Inscrições Abertas</p>
+</div>
+</div>
+<p class="text-white/80 italic text-xl leading-relaxed font-light">
+                    "O futuro da gestão fazendária passa pela integração inteligente de dados e automação generativa."
+                </p>
+<div class="mt-8 pt-8 border-t border-white/10 flex justify-between items-center">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-[#0d1117] bg-surface-variant"></div>
+<div class="w-10 h-10 rounded-full border-2 border-[#0d1117] bg-primary"></div>
+<div class="w-10 h-10 rounded-full border-2 border-[#0d1117] bg-secondary"></div>
+<div class="w-10 h-10 rounded-full border-2 border-[#0d1117] bg-surface flex items-center justify-center text-[10px] font-bold">+1k</div>
+</div>
+<span class="text-white/40 text-xs font-bold uppercase tracking-widest">Vagas Limitadas</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Logo Section -->
+<section class="bg-[#0d1117] border-y border-white/5 py-20 relative z-20">
+<div class="max-w-7xl mx-auto px-8 text-center">
+<p class="font-headline text-xs font-bold tracking-[0.3em] uppercase text-white/40 mb-14">Uma parceria estratégica:</p>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-32 opacity-50 grayscale hover:grayscale-0 transition-all duration-700">
+<div class="text-3xl font-black text-white">SEF/SC</div>
+<div class="text-4xl font-bold text-[#2800ff]">Alura</div>
+<div class="text-4xl font-black text-white">FIAP</div>
+</div>
+</div>
+</section>
+<!-- Main Content with Stacking Effects -->
+<div class="parallax-wrap">
+<!-- About Section -->
+<section class="py-32 bg-surface section-reveal" id="sobre">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid md:grid-cols-2 gap-24 items-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-[2.5rem] blur-3xl group-hover:bg-primary/10 transition-colors"></div>
+<img alt="Colaboração Profissional" class="rounded-[2.5rem] shadow-2xl relative z-10 w-full aspect-[4/3] object-cover border border-outline-variant/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCJvZ72iAsP6IjkBxmipsEY3LxAtFvgdCBXNKqhzPYpEsD77PD3lQLZjl7c4yuRcMNiVM9atQ2Bc6LRfYIMfEAbF8ajYNziR9hut0-MutdhxQ0ebMhtoqXQmsYVZxHA8crqCBT0iRE3CIh3GNFLcusGzLjGtSnVoEB7RbwuhZx1BnYofVUy7-diQgi9mFio7OOvvIVOoFwKu_rzk8zS1d5Y3_VhKbiBLisog1ImISHkjKzH6zbh33JcejfUCaDOX_iNBt6rq-OQTM"/>
+<div class="absolute -bottom-8 -right-8 bg-white p-10 rounded-3xl shadow-2xl z-20 max-w-[260px] border border-outline-variant/10">
+<span class="text-6xl font-extrabold text-primary block mb-2">46h</span>
+<p class="text-on-surface-variant text-xs font-black uppercase tracking-widest leading-tight">Carga Horária com Certificação</p>
+</div>
+</div>
+<div class="space-y-10">
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold text-on-surface leading-tight tracking-tighter">
+                        Transforme dados em <span class="text-primary">inteligência</span> estratégica.
+                    </h2>
+<p class="text-xl text-on-surface-variant leading-relaxed font-light">
+                        Desenvolva competências em IA Generativa, ChatGPT, automação e análise de dados aplicadas diretamente ao contexto fazendário. Nossa metodologia foca em resultados práticos para a gestão pública.
+                    </p>
+<ul class="space-y-6">
+<li class="flex items-center gap-5 text-on-surface group">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg group-hover:scale-110 transition-transform">check_circle</span>
+<span class="text-lg font-medium">IA Generativa para produtividade</span>
+</li>
+<li class="flex items-center gap-5 text-on-surface group">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg group-hover:scale-110 transition-transform">check_circle</span>
+<span class="text-lg font-medium">Automação de processos rotineiros</span>
+</li>
+<li class="flex items-center gap-5 text-on-surface group">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg group-hover:scale-110 transition-transform">check_circle</span>
+<span class="text-lg font-medium">Análise preditiva de arrecadação</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Tracks Section -->
+<section class="py-32 bg-surface-container-low section-reveal" id="trilhas">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-24 space-y-6">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter">Escolha sua Trilha de Especialização</h2>
+<p class="text-on-surface-variant text-xl max-w-2xl mx-auto font-light">Capacitação modular desenhada para diferentes níveis de senioridade e áreas de atuação.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<!-- Card 1 -->
+<div class="bg-white p-12 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-outline-variant/10 group relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-secondary/10 transition-colors"></div>
+<div class="flex justify-between items-start mb-12">
+<div class="p-5 bg-secondary-container/20 rounded-2xl group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-secondary text-5xl">visibility</span>
+</div>
+<span class="bg-secondary-container/10 text-secondary px-5 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-secondary-container/20">Nível 1</span>
+</div>
+<h3 class="text-4xl font-extrabold mb-6 tracking-tight">Consciente</h3>
+<p class="text-on-surface-variant text-lg mb-10 min-h-[90px] font-light leading-relaxed">Focado em democratizar o uso da IA para todos os servidores. Introdução prática ao ChatGPT, ética digital e produtividade diária.</p>
+<div class="flex items-center gap-8 mb-12 text-sm font-bold text-on-surface/60 uppercase tracking-widest">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary">group</span>
+                            1.000 Vagas
+                        </div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary">verified</span>
+                            Certificado FIAP
+                        </div>
+</div>
+<button class="w-full py-5 border-2 border-primary-container text-primary-container rounded-2xl font-bold text-lg hover:bg-primary-container hover:text-white transition-all transform group-hover:-translate-y-1">
+                        Inscrever-se na Trilha Consciente
+                    </button>
+</div>
+<!-- Card 2 -->
+<div class="bg-white p-12 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-outline-variant/10 group relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary-container text-white px-8 py-3 rounded-bl-3xl text-xs font-black tracking-widest">EXCLUSIVO</div>
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="flex justify-between items-start mb-12">
+<div class="p-5 bg-primary-container/20 rounded-2xl group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-primary text-5xl">rocket_launch</span>
+</div>
+<span class="bg-primary-container/10 text-primary px-5 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-primary-container/20">Nível 2</span>
+</div>
+<h3 class="text-4xl font-extrabold mb-6 tracking-tight">Emergente</h3>
+<p class="text-on-surface-variant text-lg mb-10 min-h-[90px] font-light leading-relaxed">Aprofundamento estratégico em Machine Learning e análise avançada de dados (No/Low Code) para tomada de decisão baseada em dados.</p>
+<div class="flex items-center gap-8 mb-12 text-sm font-bold text-on-surface/60 uppercase tracking-widest">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary">military_tech</span>
+                            40 Vagas VIP
+                        </div>
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary">bolt</span>
+                            Mentoria Especializada
+                        </div>
+</div>
+<button class="w-full py-5 bg-primary text-white rounded-2xl font-bold text-lg shadow-xl shadow-primary/20 hover:bg-primary-container hover:-translate-y-1 transition-all">
+                        Inscrever-se na Trilha Emergente
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Schedule Section -->
+<section class="py-32 bg-surface section-reveal" id="calendario">
+<div class="max-w-7xl mx-auto px-8">
+<div class="bg-[#0d1117] p-12 md:p-24 rounded-[3.5rem] text-white relative overflow-hidden group">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<div class="hero-grid-pattern"></div>
+</div>
+<div class="absolute top-0 right-0 w-full h-full opacity-10 scale-110 group-hover:scale-100 transition-transform duration-[3s]">
+<img alt="Calendário Corporativo" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiHSRP2mJnPaXRGDpDQkraDHxqxGhYgJOO32rnaRPcNPtMgGK_cK9nwuZHYMBqZ8O21TPxNQOkkqFCWTesJJzPKRdJYcdL_hSHgGtHFxbuhRPIs2VF8zcmsFiFVC5xyk1UeRR-7eijs_jLEzLrHxXIjsQcTDM-dvBLM-Rv3k35HmhtIiFyOjHnmK0qwvNtF4GO2Q4iRGYbuAini2SBfd3hEmwhAQ_z5jVWs00Nw5l7HDGGXCTHzzOjjaXnCPUE8RsHgm7R5hgCeJk"/>
+</div>
+<div class="relative z-10 grid md:grid-cols-2 gap-20 items-center">
+<div class="space-y-10">
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter">Organize sua agenda para o futuro.</h2>
+<div class="grid grid-cols-1 gap-8">
+<div class="flex items-center gap-8 bg-white/5 p-8 rounded-3xl backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-primary-fixed text-5xl">calendar_month</span>
+<div>
+<p class="text-white/40 text-xs font-black uppercase tracking-[0.2em] mb-1">Início das Aulas</p>
+<p class="text-2xl font-bold">04 de maio de 2026</p>
+</div>
+</div>
+<div class="flex items-center gap-8 bg-white/5 p-8 rounded-3xl backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-primary-fixed text-5xl">schedule</span>
+<div>
+<p class="text-white/40 text-xs font-black uppercase tracking-[0.2em] mb-1">Frequência</p>
+<p class="text-2xl font-bold">3x por semana (Seg/Qua/Sex)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-10">
+<div class="bg-primary-container/90 backdrop-blur-xl p-10 rounded-[2.5rem] shadow-2xl border border-white/20">
+<h4 class="text-3xl font-extrabold mb-6 tracking-tight">Modalidade Híbrida</h4>
+<p class="text-white/80 text-lg leading-relaxed mb-8 font-light">Aulas síncronas via Google Meet com suporte assíncrono na plataforma Alura.</p>
+<div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-xl inline-flex">
+<span class="material-symbols-outlined">video_camera_front</span>
+<span class="font-bold uppercase text-xs tracking-widest">Sessões Interativas ao Vivo</span>
+</div>
+</div>
+<p class="text-white/30 text-sm font-medium">Inscrições abertas até 15 de abril ou enquanto durarem as vagas.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-32 bg-surface-container-low section-reveal" id="faq">
+<div class="max-w-4xl mx-auto px-8">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-center mb-20 tracking-tighter">Perguntas Frequentes</h2>
+<div class="space-y-6">
+<div class="bg-white p-10 rounded-[2rem] shadow-sm border border-outline-variant/10 group cursor-pointer hover:shadow-xl transition-all">
+<div class="flex justify-between items-center w-full text-left">
+<span class="text-xl font-bold tracking-tight">Quem pode participar da Jornada?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+</div>
+<div class="mt-6 text-on-surface-variant leading-relaxed text-lg font-light">
+                        A capacitação é exclusiva para servidores ativos da Secretaria de Estado da Fazenda de Santa Catarina (SEF/SC).
+                    </div>
+</div>
+<div class="bg-white p-10 rounded-[2rem] shadow-sm border border-outline-variant/10 group cursor-pointer hover:shadow-xl transition-all">
+<div class="flex justify-between items-center w-full text-left">
+<span class="text-xl font-bold tracking-tight">Qual o custo da capacitação?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+</div>
+<div class="mt-6 text-on-surface-variant leading-relaxed text-lg font-light">
+                        O curso é 100% gratuito para o servidor, sendo um investimento direto da SEF/SC no desenvolvimento do capital humano.
+                    </div>
+</div>
+<div class="bg-white p-10 rounded-[2rem] shadow-sm border border-outline-variant/10 group cursor-pointer hover:shadow-xl transition-all">
+<div class="flex justify-between items-center w-full text-left">
+<span class="text-xl font-bold tracking-tight">Como receberei meu certificado?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+</div>
+<div class="mt-6 text-on-surface-variant leading-relaxed text-lg font-light">
+                        Ao concluir 75% da carga horária e as atividades propostas, você receberá um certificado digital co-assinado pela Alura e FIAP, reconhecido nacionalmente.
+                    </div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="bg-on-surface text-white w-full rounded-t-[3.5rem] mt-20 relative z-30">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center px-12 py-24 gap-12 max-w-7xl mx-auto">
+<div class="space-y-6">
+<div class="text-4xl font-extrabold tracking-tighter">SEF/SC</div>
+<p class="text-white/50 text-lg max-w-sm font-light leading-relaxed">Desenvolvendo a excelência na gestão pública através da tecnologia e inteligência artificial.</p>
+<p class="text-white/30 text-sm font-medium">© 2024 SEF/SC. Parceria com Alura e FIAP.</p>
+</div>
+<div class="flex flex-wrap gap-x-16 gap-y-8 uppercase text-xs font-black tracking-[0.2em]">
+<a class="hover:text-primary transition-colors" href="#">Privacidade</a>
+<a class="hover:text-primary transition-colors" href="#">Termos de Uso</a>
+<a class="hover:text-primary transition-colors" href="#">Contato</a>
+</div>
+<div class="flex gap-6">
+<button class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">share</span>
+</button>
+<button class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all group">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform">mail</span>
+</button>
+</div>
+</div>
+</footer>
+<!-- Floating Action Button -->
+<button class="fixed bottom-10 right-10 z-[60] bg-primary-container text-white px-10 py-5 rounded-2xl font-headline font-extrabold text-sm uppercase tracking-[0.15em] shadow-[0_20px_50px_rgba(40,0,255,0.4)] hover:scale-110 active:scale-95 transition-all flex items-center gap-4 group">
+<span class="material-symbols-outlined group-hover:rotate-12 transition-transform">edit_note</span>
+    Inscreva-se Agora
+</button>
+<script>
+    // Particle Generator (GitHub Effect)
+    const container = document.getElementById('particles-container');
+    const particleCount = 20;
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Randomize
+        const size = Math.random() * 4 + 1;
+        const left = Math.random() * 100;
+        const delay = Math.random() * 20;
+        const duration = Math.random() * 15 + 15;
+        const opacity = Math.random() * 0.5 + 0.1;
+
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${left}%`;
+        particle.style.bottom = `-10px`;
+        particle.style.animationDelay = `${delay}s`;
+        particle.style.animationDuration = `${duration}s`;
+        particle.style.opacity = opacity;
+
+        container.appendChild(particle);
+    }
+
+    // Scroll Reveal (GitHub Effect)
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.section-reveal').forEach(el => observer.observe(el));
+
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', () => {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('py-2', 'shadow-xl');
+            nav.classList.remove('py-4');
+        } else {
+            nav.classList.remove('py-2', 'shadow-xl');
+            nav.classList.add('py-4');
+        }
+    });
+</script>
+</body></html>
