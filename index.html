@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-
-<html class="scroll-smooth" lang="pt-BR"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!DOCTYPE html><html class="scroll-smooth" lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Jornada de Inteligência Artificial SEF/SC</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -116,7 +114,7 @@
 
         .particle {
             position: absolute;
-            background: #ffffff;
+            background: #e7e3f3; /* Light lilac requested */
             border-radius: 50%;
             pointer-events: none;
             opacity: 0;
@@ -129,8 +127,8 @@
                 transform: translateY(110vh) translateX(0) scale(1);
                 opacity: 0; 
             }
-            10% { opacity: 0.8; }
-            90% { opacity: 0.8; }
+            10% { opacity: 0.6; }
+            90% { opacity: 0.6; }
             100% { 
                 transform: translateY(-10vh) translateX(var(--drift)) scale(0.5);
                 opacity: 0; 
@@ -154,6 +152,7 @@
             z-index: 10;
         }
         
+        .no-line { border: none !important; }
         .tonal-depth { background-color: rgba(252, 249, 248, 0.8); backdrop-filter: blur(20px); }
     </style>
 </head>
@@ -161,18 +160,14 @@
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-outline-variant/20 transition-all duration-300">
 <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-<div class="tracking-tighter">
-<a class="flex items-center" href="https://www.sc.gov.br" target="_blank">
-<img alt="Logo SC.GOV.BR" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uim1rWaPVXXxUzhaDaDXwDg-PmANhlToOBz2lZ8EZE5_Dtc792TVmD-Z3CuAaFogqCzwuSuJt9bB8iyULV37iSud5nplAMCo7bbz8913tq9GwvFfRy2QvtaIKoCDYgPOW8DO7XOnur7UHJJ6TiFr426eNq4OrV6qdxrVI-rFSungksFprWr5W00BIjbwFpf5YWO3exRwqwnUuPXEsH_s0fk94k2_6HRO3MdD-qsthUhhKjsHLE66Mo8zf5euYhjH1gTUnhNXTpn"/>
-</a>
-</div>
+<div class="tracking-tighter"><a class="flex items-center" href="https://www.sc.gov.br" style="" target="_blank"><img alt="Logo SC.GOV.BR" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uim1rWaPVXXxUzhaDaDXwDg-PmANhlToOBz2lZ8EZE5_Dtc792TVmD-Z3CuAaFogqCzwuSuJt9bB8iyULV37iSud5nplAMCo7bbz8913tq9GwvFfRy2QvtaIKoCDYgPOW8DO7XOnur7UHJJ6TiFr426eNq4OrV6qdxrVI-rFSungksFprWr5W00BIjbwFpf5YWO3exRwqwnUuPXEsH_s0fk94k2_6HRO3MdD-qsthUhhKjsHLE66Mo8zf5euYhjH1gTUnhNXTpn" style=""></a></div>
 <div class="hidden md:flex items-center gap-8">
-<a class="font-headline text-sm font-bold tracking-wider uppercase text-on-surface hover:text-primary transition-colors" href="#sobre">Sobre</a>
-<a class="font-headline text-sm font-bold tracking-wider uppercase text-on-surface hover:text-primary transition-colors" href="#trilhas">Trilhas</a>
-<a class="font-headline text-sm font-bold tracking-wider uppercase text-on-surface hover:text-primary transition-colors" href="#calendario">Calendário</a>
-<a class="font-headline text-sm font-bold tracking-wider uppercase text-on-surface hover:text-primary transition-colors" href="#faq">FAQ</a>
+<a class="font-headline text-sm font-bold tracking-wider uppercase text-on-surface hover:text-primary transition-colors" href="#sobre" style="">Sobre</a>
+<a class="font-headline text-sm font-bold tracking-wider uppercase text-on-surface hover:text-primary transition-colors" href="#trilhas" style="">Trilhas</a>
+<a class="font-headline text-sm font-bold tracking-wider uppercase text-on-surface hover:text-primary transition-colors" href="#calendario" style="">Calendário</a>
+<a class="font-headline text-sm font-bold tracking-wider uppercase text-on-surface hover:text-primary transition-colors" href="#faq" style="">FAQ</a>
 </div>
-<a class="bg-primary text-white px-6 py-2 rounded-lg font-headline text-sm font-bold uppercase tracking-wider hover:bg-primary-container transition-all active:scale-95" href="https://forms.gle/CAXYPw95YWwppLpp8" target="_blank">
+<a class="bg-primary text-white px-6 py-2 rounded-lg font-headline text-sm font-bold uppercase tracking-wider hover:bg-primary-container transition-all active:scale-95" href="https://forms.gle/CAXYPw95YWwppLpp8" style="" target="_blank">
             Inscreva-se
         </a>
 </div>
@@ -183,23 +178,19 @@
 <div class="hero-glow"></div>
 <div class="hero-grid-pattern"></div>
 <!-- Particles container for JS injection -->
-<div class="absolute inset-0 pointer-events-none" id="particles-container"></div>
+<div class="absolute inset-0 pointer-events-none" id="particles-container"><div class="particle" style="width: 4.900849px; height: 4.900849px; left: 73.386779%; bottom: -10px; --duration: 18.38182328961541s; --drift: -5.858028914546187px; animation-delay: -5.923596s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.736364px; height: 4.736364px; left: 79.13423%; bottom: -10px; --duration: 13.229439581581122s; --drift: 56.785834105406096px; animation-delay: -16.784136s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.632441px; height: 4.632441px; left: 48.594647%; bottom: -10px; --duration: 18.849373048386887s; --drift: 13.018998881803356px; animation-delay: -17.217292s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.341083px; height: 2.341083px; left: 75.132659%; bottom: -10px; --duration: 15.135064451877795s; --drift: 22.90169043624428px; animation-delay: -9.549513s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.694906px; height: 2.694906px; left: 97.281617%; bottom: -10px; --duration: 11.422588476631505s; --drift: -52.79615080839362px; animation-delay: -12.975891s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.985732px; height: 4.985732px; left: 43.439997%; bottom: -10px; --duration: 10.584142338639712s; --drift: 4.098663709536399px; animation-delay: -13.770845s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.190425px; height: 4.190425px; left: 57.07705%; bottom: -10px; --duration: 11.815089766851912s; --drift: -22.417552601330094px; animation-delay: -5.668049s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.659976px; height: 1.659976px; left: 32.966926%; bottom: -10px; --duration: 10.422473480336436s; --drift: 80.26781499266009px; animation-delay: -7.680536s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.944365px; height: 4.944365px; left: 13.555277%; bottom: -10px; --duration: 14.295671141775353s; --drift: 32.262312565724294px; animation-delay: -4.202449s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.074833px; height: 2.074833px; left: 1.376691%; bottom: -10px; --duration: 18.434509306518926s; --drift: -99.63886427734496px; animation-delay: -1.315769s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.693308px; height: 2.693308px; left: 41.570845%; bottom: -10px; --duration: 15.726267444797857s; --drift: -4.8783526036240366px; animation-delay: -17.631833s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 5.109716px; height: 5.109716px; left: 49.028229%; bottom: -10px; --duration: 18.686893158424525s; --drift: 47.31039208009624px; animation-delay: -14.067907s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.549879px; height: 1.549879px; left: 61.103964%; bottom: -10px; --duration: 16.78924169323372s; --drift: -55.13495899008909px; animation-delay: -2.693578s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.536148px; height: 3.536148px; left: 6.521836%; bottom: -10px; --duration: 12.086363681407258s; --drift: 51.808906602942415px; animation-delay: -8.280372s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.439127px; height: 4.439127px; left: 94.325142%; bottom: -10px; --duration: 16.47439857606937s; --drift: 25.67092897521299px; animation-delay: -1.388905s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.637578px; height: 3.637578px; left: 6.631401%; bottom: -10px; --duration: 15.178875326875339s; --drift: -62.72491531641027px; animation-delay: -3.810842s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.479548px; height: 2.479548px; left: 42.914493%; bottom: -10px; --duration: 17.253019412314394s; --drift: 34.59202127246797px; animation-delay: -13.511023s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.241008px; height: 4.241008px; left: 47.134875%; bottom: -10px; --duration: 14.520037499161589s; --drift: 34.31856831713935px; animation-delay: -16.916205s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.821842px; height: 3.821842px; left: 12.877595%; bottom: -10px; --duration: 10.274991985497445s; --drift: 71.83269949763935px; animation-delay: -17.55263s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.637923px; height: 3.637923px; left: 93.370996%; bottom: -10px; --duration: 10.820229872572236s; --drift: -55.26008073658646px; animation-delay: -0.051094s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.464997px; height: 4.464997px; left: 78.814848%; bottom: -10px; --duration: 12.662562915714899s; --drift: 55.792655865951566px; animation-delay: -7.964247s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 5.068943px; height: 5.068943px; left: 76.671159%; bottom: -10px; --duration: 13.522049532205852s; --drift: 66.7814510792233px; animation-delay: -8.294608s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 5.401628px; height: 5.401628px; left: 8.974364%; bottom: -10px; --duration: 17.043632300856444s; --drift: -66.0556231740137px; animation-delay: -17.044791s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.898559px; height: 4.898559px; left: 8.379124%; bottom: -10px; --duration: 17.577373540131838s; --drift: -61.485454395897364px; animation-delay: -6.404762s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.721581px; height: 4.721581px; left: 73.12016%; bottom: -10px; --duration: 16.947763968713012s; --drift: -4.455677130234781px; animation-delay: -0.217263s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.652229px; height: 1.652229px; left: 26.028958%; bottom: -10px; --duration: 19.915972452226328s; --drift: 78.0108995049188px; animation-delay: -9.433113s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.828891px; height: 2.828891px; left: 10.770647%; bottom: -10px; --duration: 19.679501792883773s; --drift: 82.69082595390323px; animation-delay: -9.727556s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 5.495352px; height: 5.495352px; left: 44.848208%; bottom: -10px; --duration: 16.577169267502974s; --drift: 15.653820765012782px; animation-delay: -11.727345s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.931711px; height: 1.931711px; left: 47.827221%; bottom: -10px; --duration: 12.360325290401326s; --drift: -85.31344443307385px; animation-delay: -13.506937s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.71271px; height: 1.71271px; left: 13.771587%; bottom: -10px; --duration: 18.43837919042069s; --drift: 87.5389426509723px; animation-delay: -6.443571s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.354418px; height: 2.354418px; left: 90.459214%; bottom: -10px; --duration: 14.766961018095653s; --drift: 73.41652995470123px; animation-delay: -12.176468s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.212189px; height: 2.212189px; left: 72.445542%; bottom: -10px; --duration: 10.075002393371351s; --drift: -36.22082102859554px; animation-delay: -14.42674s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.759737px; height: 3.759737px; left: 71.881711%; bottom: -10px; --duration: 18.888393714710816s; --drift: -26.581735867936395px; animation-delay: -3.814513s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.318781px; height: 4.318781px; left: 64.489102%; bottom: -10px; --duration: 12.487229076943667s; --drift: 72.45046264419818px; animation-delay: -3.065516s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 5.384973px; height: 5.384973px; left: 51.734274%; bottom: -10px; --duration: 16.82672642614418s; --drift: -54.59299869529715px; animation-delay: -12.066531s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.302432px; height: 2.302432px; left: 26.898257%; bottom: -10px; --duration: 13.042804621901821s; --drift: 19.23521565944426px; animation-delay: -8.109155s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.374468px; height: 2.374468px; left: 6.456261%; bottom: -10px; --duration: 12.820653164952043s; --drift: 99.82370047841485px; animation-delay: -18.24002s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.536688px; height: 2.536688px; left: 80.80396%; bottom: -10px; --duration: 15.104823098859036s; --drift: 56.3403076655544px; animation-delay: -4.755079s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.536568px; height: 1.536568px; left: 45.343211%; bottom: -10px; --duration: 10.424796098227864s; --drift: -93.30975536528103px; animation-delay: -7.136147s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.792015px; height: 3.792015px; left: 72.064404%; bottom: -10px; --duration: 16.229020338662092s; --drift: 88.54193443310922px; animation-delay: -11.197183s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.977247px; height: 2.977247px; left: 77.210573%; bottom: -10px; --duration: 12.896797411901032s; --drift: -52.181850420578016px; animation-delay: -16.215526s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 5.120969px; height: 5.120969px; left: 22.20923%; bottom: -10px; --duration: 15.293659845740077s; --drift: -84.06428763262312px; animation-delay: -16.904962s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.838814px; height: 3.838814px; left: 16.78432%; bottom: -10px; --duration: 14.40046334976651s; --drift: 69.97792342949683px; animation-delay: -9.914557s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.626797px; height: 4.626797px; left: 20.75812%; bottom: -10px; --duration: 17.874640954286477s; --drift: 1.592503828174685px; animation-delay: -12.611272s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.624475px; height: 1.624475px; left: 0.72156%; bottom: -10px; --duration: 11.5239909513602s; --drift: 14.784735066624544px; animation-delay: -0.181299s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 5.07896px; height: 5.07896px; left: 40.081404%; bottom: -10px; --duration: 14.551044235114801s; --drift: -18.755293429429145px; animation-delay: -8.180746s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.76129px; height: 3.76129px; left: 17.477128%; bottom: -10px; --duration: 12.016564105318395s; --drift: -95.8374639470313px; animation-delay: -15.406803s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 5.159562px; height: 5.159562px; left: 45.26008%; bottom: -10px; --duration: 14.164574325291339s; --drift: 20.220959030034113px; animation-delay: -14.585073s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.757409px; height: 1.757409px; left: 98.030792%; bottom: -10px; --duration: 19.583087809832477s; --drift: 56.927682915690745px; animation-delay: -17.972038s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.698667px; height: 2.698667px; left: 83.342916%; bottom: -10px; --duration: 19.435732016424648s; --drift: -11.33332276771557px; animation-delay: -13.03782s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.198514px; height: 3.198514px; left: 96.086537%; bottom: -10px; --duration: 18.242526308760354s; --drift: -46.34405123725438px; animation-delay: -18.758902s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.476599px; height: 3.476599px; left: 62.970187%; bottom: -10px; --duration: 15.08007513712357s; --drift: -23.930942484663454px; animation-delay: -15.581368s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.52964px; height: 1.52964px; left: 10.293446%; bottom: -10px; --duration: 16.14471236838508s; --drift: -58.805210131868925px; animation-delay: -8.51092s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.675728px; height: 3.675728px; left: 61.786962%; bottom: -10px; --duration: 14.825929626395894s; --drift: -7.040027383189074px; animation-delay: -17.935826s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 5.471915px; height: 5.471915px; left: 68.561204%; bottom: -10px; --duration: 15.744593788443716s; --drift: 4.474801383624771px; animation-delay: -12.47315s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.626661px; height: 3.626661px; left: 30.403588%; bottom: -10px; --duration: 14.385584717762793s; --drift: -72.15276379690252px; animation-delay: -3.91351s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.287777px; height: 4.287777px; left: 86.152535%; bottom: -10px; --duration: 11.371079432708893s; --drift: -95.76699140059888px; animation-delay: -17.154101s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.675895px; height: 4.675895px; left: 2.658274%; bottom: -10px; --duration: 16.251165606539903s; --drift: -8.716318540059497px; animation-delay: -7.392978s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.485286px; height: 3.485286px; left: 92.900417%; bottom: -10px; --duration: 12.548361770842696s; --drift: -9.586463900442821px; animation-delay: -9.879278s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.010973px; height: 3.010973px; left: 60.251292%; bottom: -10px; --duration: 17.728305299023894s; --drift: 91.81096405019208px; animation-delay: -17.300653s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.222037px; height: 2.222037px; left: 15.126374%; bottom: -10px; --duration: 11.336636982847457s; --drift: 42.521724995520536px; animation-delay: -4.525498s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.456396px; height: 3.456396px; left: 37.13437%; bottom: -10px; --duration: 12.364564250462054s; --drift: -62.41736247741978px; animation-delay: -11.168243s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.508944px; height: 4.508944px; left: 0.42821%; bottom: -10px; --duration: 12.986766839774617s; --drift: -57.15062927039087px; animation-delay: -17.638815s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.627492px; height: 2.627492px; left: 95.956373%; bottom: -10px; --duration: 19.744468412904233s; --drift: 8.058953039407978px; animation-delay: -0.448119s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.724559px; height: 3.724559px; left: 2.034607%; bottom: -10px; --duration: 18.05832676433935s; --drift: 8.345042084925346px; animation-delay: -18.326518s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.952673px; height: 3.952673px; left: 38.38818%; bottom: -10px; --duration: 16.960687526273322s; --drift: -21.14274352506129px; animation-delay: -19.7335s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.59663px; height: 4.59663px; left: 31.312165%; bottom: -10px; --duration: 12.61416067111579s; --drift: 89.57211162740784px; animation-delay: -2.546006s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.929204px; height: 1.929204px; left: 57.71094%; bottom: -10px; --duration: 10.18729822750444s; --drift: -89.26932021982469px; animation-delay: -18.403459s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.549898px; height: 1.549898px; left: 63.087598%; bottom: -10px; --duration: 14.993232247050187s; --drift: -26.430000813647837px; animation-delay: -11.505479s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.517579px; height: 3.517579px; left: 68.572528%; bottom: -10px; --duration: 13.878104222930968s; --drift: 62.85166855268414px; animation-delay: -6.057028s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.147874px; height: 4.147874px; left: 55.143582%; bottom: -10px; --duration: 18.29446556113966s; --drift: -11.430812516005528px; animation-delay: -4.473654s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.875414px; height: 4.875414px; left: 37.311618%; bottom: -10px; --duration: 15.636969256134423s; --drift: 63.44518352025239px; animation-delay: -16.765963s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.253538px; height: 3.253538px; left: 1.143631%; bottom: -10px; --duration: 18.850054119936196s; --drift: -47.18595087704678px; animation-delay: -12.634737s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.531447px; height: 4.531447px; left: 25.797424%; bottom: -10px; --duration: 15.307893815053154s; --drift: 91.13099754495859px; animation-delay: -10.863875s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.370884px; height: 2.370884px; left: 24.883913%; bottom: -10px; --duration: 10.91939144162629s; --drift: -50.734407903866405px; animation-delay: -15.428387s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.652799px; height: 1.652799px; left: 96.572046%; bottom: -10px; --duration: 16.706422656724513s; --drift: -54.33496587225901px; animation-delay: -16.59854s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.332869px; height: 2.332869px; left: 18.042116%; bottom: -10px; --duration: 16.6682694093002s; --drift: 27.71542842899255px; animation-delay: -12.327292s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.072725px; height: 2.072725px; left: 93.115473%; bottom: -10px; --duration: 12.076649710890232s; --drift: -75.12294870185366px; animation-delay: -5.919677s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.094057px; height: 4.094057px; left: 56.692719%; bottom: -10px; --duration: 12.924499980349633s; --drift: 59.082056619717996px; animation-delay: -13.44512s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.878761px; height: 4.878761px; left: 98.069032%; bottom: -10px; --duration: 18.224099659812115s; --drift: 76.29549626717937px; animation-delay: -10.155679s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.540451px; height: 1.540451px; left: 5.671918%; bottom: -10px; --duration: 14.686882889926403s; --drift: 42.64498088548272px; animation-delay: -9.836027s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.500712px; height: 4.500712px; left: 89.301905%; bottom: -10px; --duration: 10.251023965447848s; --drift: -26.69154484057319px; animation-delay: -16.14042s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.655521px; height: 4.655521px; left: 88.217587%; bottom: -10px; --duration: 11.471993142373435s; --drift: -70.06349982459925px; animation-delay: -18.961448s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.624367px; height: 3.624367px; left: 55.11778%; bottom: -10px; --duration: 19.969677785130827s; --drift: -86.36226354131047px; animation-delay: -18.907736s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.654721px; height: 3.654721px; left: 33.245689%; bottom: -10px; --duration: 16.504828448904046s; --drift: 62.74015838743683px; animation-delay: -17.253439s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 5.325245px; height: 5.325245px; left: 24.750081%; bottom: -10px; --duration: 11.704052331164126s; --drift: 87.08783451715705px; animation-delay: -6.331981s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.970014px; height: 1.970014px; left: 66.63768%; bottom: -10px; --duration: 13.866860062535832s; --drift: -29.453371776171778px; animation-delay: -8.575477s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.180293px; height: 4.180293px; left: 36.289758%; bottom: -10px; --duration: 10.946673686612575s; --drift: 61.376932017579165px; animation-delay: -6.423126s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 5.020224px; height: 5.020224px; left: 19.358312%; bottom: -10px; --duration: 13.67896641399055s; --drift: 0.8127405713595159px; animation-delay: -1.86564s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.99791px; height: 2.99791px; left: 56.408169%; bottom: -10px; --duration: 17.637869017985764s; --drift: 79.24775233694199px; animation-delay: -10.513142s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.214893px; height: 4.214893px; left: 1.34924%; bottom: -10px; --duration: 15.767355848566659s; --drift: 52.094716022406075px; animation-delay: -19.632344s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.639863px; height: 4.639863px; left: 78.300907%; bottom: -10px; --duration: 10.305243323173016s; --drift: -47.68639400820503px; animation-delay: -2.91805s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.340446px; height: 2.340446px; left: 58.367952%; bottom: -10px; --duration: 16.559704412403995s; --drift: 21.377140175341758px; animation-delay: -8.116249s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.839372px; height: 1.839372px; left: 22.282583%; bottom: -10px; --duration: 17.171763120209178s; --drift: 30.61851520037864px; animation-delay: -8.611778s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.90194px; height: 1.90194px; left: 3.890247%; bottom: -10px; --duration: 18.704312524925804s; --drift: -85.70682925254862px; animation-delay: -9.943868s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 5.140054px; height: 5.140054px; left: 87.731345%; bottom: -10px; --duration: 11.072907550236796s; --drift: -14.311183045551147px; animation-delay: -17.281158s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.770109px; height: 3.770109px; left: 78.683978%; bottom: -10px; --duration: 17.14302962497193s; --drift: -58.72958649622924px; animation-delay: -7.629735s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.366962px; height: 3.366962px; left: 58.009499%; bottom: -10px; --duration: 11.486373986615869s; --drift: -98.00831809002068px; animation-delay: -0.648237s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.633165px; height: 3.633165px; left: 32.936538%; bottom: -10px; --duration: 13.512155523697237s; --drift: -69.9499469124905px; animation-delay: -0.624013s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.668863px; height: 1.668863px; left: 34.342456%; bottom: -10px; --duration: 16.055086010891884s; --drift: 59.97494240262422px; animation-delay: -4.460195s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.996034px; height: 2.996034px; left: 91.038511%; bottom: -10px; --duration: 15.588120010628225s; --drift: -82.04309332274529px; animation-delay: -9.023586s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.644171px; height: 2.644171px; left: 43.762073%; bottom: -10px; --duration: 13.414219060706172s; --drift: -33.632637888009874px; animation-delay: -2.901062s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.92434px; height: 3.92434px; left: 34.125683%; bottom: -10px; --duration: 13.019966126630537s; --drift: 11.281671439512708px; animation-delay: -13.730554s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.19487px; height: 2.19487px; left: 20.972149%; bottom: -10px; --duration: 16.997034503425763s; --drift: 41.35122037277492px; animation-delay: -7.599423s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.508495px; height: 3.508495px; left: 89.284255%; bottom: -10px; --duration: 18.772771747816197s; --drift: 89.76861093600644px; animation-delay: -1.936567s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.577571px; height: 4.577571px; left: 37.893859%; bottom: -10px; --duration: 12.796037787865233s; --drift: 53.39699396496156px; animation-delay: -11.072164s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.826379px; height: 1.826379px; left: 53.834986%; bottom: -10px; --duration: 10.590027497450503s; --drift: -35.98049069943037px; animation-delay: -9.02006s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.685496px; height: 1.685496px; left: 7.242716%; bottom: -10px; --duration: 12.952170842090124s; --drift: 13.082348382903653px; animation-delay: -5.013253s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.812816px; height: 2.812816px; left: 36.258171%; bottom: -10px; --duration: 10.535025514119397s; --drift: 55.62953132047544px; animation-delay: -15.28105s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.927835px; height: 3.927835px; left: 49.658362%; bottom: -10px; --duration: 19.254019457377012s; --drift: -67.4709984236709px; animation-delay: -14.780964s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.759936px; height: 2.759936px; left: 44.623815%; bottom: -10px; --duration: 13.669461294230162s; --drift: 2.5403271911222713px; animation-delay: -1.527167s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 2.840025px; height: 2.840025px; left: 78.506595%; bottom: -10px; --duration: 14.712144469559753s; --drift: -22.6525016115978px; animation-delay: -2.926789s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.248149px; height: 4.248149px; left: 8.841631%; bottom: -10px; --duration: 18.51889642931279s; --drift: 31.633044987398694px; animation-delay: -14.535365s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.928322px; height: 1.928322px; left: 53.057237%; bottom: -10px; --duration: 10.512585552775645s; --drift: 55.2085647758926px; animation-delay: -14.96937s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.961541px; height: 1.961541px; left: 26.174681%; bottom: -10px; --duration: 17.673465632422406s; --drift: -22.95777942405861px; animation-delay: -17.931543s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.84486px; height: 1.84486px; left: 51.529811%; bottom: -10px; --duration: 13.299120416812169s; --drift: -11.47844934616906px; animation-delay: -3.790225s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 3.345438px; height: 3.345438px; left: 96.196023%; bottom: -10px; --duration: 14.593460396093977s; --drift: -2.119898144936805px; animation-delay: -5.522969s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 1.766959px; height: 1.766959px; left: 54.683062%; bottom: -10px; --duration: 14.318384844086438s; --drift: -22.714560414381403px; animation-delay: -1.946837s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.497526px; height: 4.497526px; left: 58.93276%; bottom: -10px; --duration: 12.51572748338809s; --drift: 25.568921085860687px; animation-delay: -19.410855s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div><div class="particle" style="width: 4.50219px; height: 4.50219px; left: 33.920577%; bottom: -10px; --duration: 17.880289441426456s; --drift: 44.33359799300756px; animation-delay: -13.130316s; background-color: rgb(231, 227, 243); box-shadow: rgba(231, 227, 243, 0.4) 0px 0px 6px;"></div></div>
 </div>
 <div class="relative z-10 max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-center">
 <div class="space-y-10">
-<div class="inline-flex items-center gap-2 font-headline text-xs font-bold tracking-[0.25em] uppercase px-4 py-1.5 rounded-full border bg-white/10 text-white border-white/20 backdrop-blur-md">
-<span class="w-2 h-2 bg-white rounded-full animate-pulse"></span> Inovação Pública
-            </div>
-<h1 class="font-headline text-white text-5xl md:text-[5.5rem] font-extrabold leading-[1.1] tracking-tighter">
-                Jornada de <span class="text-primary-fixed-dim">IA</span> <span class="block">SEF/SC</span>
+<div class="inline-flex items-center gap-2 font-headline text-xs font-bold tracking-[0.25em] uppercase px-4 py-1.5 rounded-full border bg-white text-primary-container border-primary-container/10" style="">
+<span class="w-2 h-2 bg-primary-container rounded-full animate-pulse"></span>&nbsp;Inovação Pública
+</div>
+<h1 class="font-headline text-white text-5xl md:text-[5.5rem] font-extrabold leading-[1.1] tracking-tighter" style="">
+                Jornada de <span class="text-primary-fixed-dim" style="">IA</span> <span class="block" style="">SEF/SC</span>
 </h1>
-<p class="text-white/70 text-xl md:text-2xl leading-relaxed max-w-xl font-light">
-                Domine a Inteligência Artificial para transformar a gestão pública catarinense. Capacitação exclusiva para servidores.
-            </p>
+<p class="text-white/70 text-xl md:text-2xl leading-relaxed max-w-xl font-light" style="">Domine fundamentos e aplicações práticas de Inteligência Artificial para apoiar a transformação&nbsp;<div>da gestão pública catarinense.</div></p><div class="" style=""><span style="caret-color: rgb(255, 255, 255); color: rgb(255, 255, 255); font-weight: 700;">CAPACITAÇÃO DIRECIONADA PARA SERVIDORES PÚBLICOS ESTADUAIS</span><br></div><p class="" style=""></p><div class="" style=""><span class="font-bold text-white" style=""><br></span></div><p class="" style=""></p>
 <div class="flex flex-wrap gap-6 pt-4">
-<a class="bg-primary text-white px-10 py-5 rounded-xl font-headline font-bold text-lg hover:shadow-[0_0_30px_rgba(40,0,255,0.4)] hover:-translate-y-1 transition-all flex items-center gap-3" href="https://forms.gle/CAXYPw95YWwppLpp8" target="_blank">
-                    GARANTIR MINHA VAGA
-                    <span class="material-symbols-outlined">arrow_forward</span>
+<a class="bg-primary-container text-white px-10 py-5 rounded-xl font-headline font-bold text-lg hover:shadow-[0_0_30px_rgba(40,0,255,0.4)] hover:-translate-y-1 transition-all flex items-center gap-3" href="https://forms.gle/CAXYPw95YWwppLpp8" style="" target="_blank">GARANTIR MINHA VAGA<br><span class="material-symbols-outlined" style="">arrow_forward</span>
 </a>
 </div>
 </div>
@@ -208,24 +199,24 @@
 <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 <div class="flex items-center gap-4 mb-8">
 <div class="w-14 h-14 rounded-2xl bg-primary-container flex items-center justify-center shadow-lg">
-<span class="material-symbols-outlined text-white text-3xl">psychology</span>
+<span class="material-symbols-outlined text-white text-3xl" style="">psychology</span>
 </div>
 <div>
-<h4 class="text-white text-lg font-bold">Capacitação 2026</h4>
-<p class="text-primary-fixed-dim text-sm font-medium">Inscrições Abertas</p>
+<h4 class="text-white text-lg font-bold" style="">Capacitação 2026</h4>
+<p class="text-primary-fixed-dim text-sm font-medium" style="">Inscrições Abertas</p>
 </div>
 </div>
-<p class="text-white/80 italic text-xl leading-relaxed font-light">
-                    "O futuro da gestão fazendária passa pela integração inteligente de dados e automação generativa."
+<p class="text-white/80 italic text-xl leading-relaxed font-light" style="">
+                    "O futuro da gestão fazendária passa pela integração da inteligência humana com inteligências de dados e automação generativa, elevando produtividade, qualidade técnica e capacidade de decisão."
                 </p>
 <div class="mt-8 pt-8 border-t border-white/10 flex justify-between items-center">
 <div class="flex -space-x-3">
-<div class="w-10 h-10 rounded-full border-2 border-[#1a2a4a] bg-surface-variant"></div>
-<div class="w-10 h-10 rounded-full border-2 border-[#1a2a4a] bg-primary"></div>
-<div class="w-10 h-10 rounded-full border-2 border-[#1a2a4a] bg-secondary"></div>
-<div class="w-10 h-10 rounded-full border-2 border-[#1a2a4a] bg-white/20 flex items-center justify-center text-[10px] text-white font-bold backdrop-blur-sm">+1k</div>
+<div class="w-10 h-10 rounded-full border-2 border-[#0d1117] bg-surface-variant"></div>
+<div class="w-10 h-10 rounded-full border-2 border-[#0d1117] bg-primary"></div>
+<div class="w-10 h-10 rounded-full border-2 border-[#0d1117] bg-secondary"></div>
+<div class="w-10 h-10 rounded-full border-2 border-[#0d1117] bg-surface flex items-center justify-center text-[10px] font-bold" style="">+1k</div>
 </div>
-<span class="text-white/40 text-xs font-bold uppercase tracking-widest">Vagas Limitadas</span>
+<span class="text-white/40 text-xs font-bold uppercase tracking-widest" style="">Vagas Limitadas</span>
 </div>
 </div>
 </div>
@@ -234,53 +225,47 @@
 <!-- Logo Section -->
 <section class="bg-[#0d1117] border-y border-white/5 py-20 relative z-20">
 <div class="max-w-7xl mx-auto px-8 text-center">
-<p class="font-headline text-xs font-bold tracking-[0.3em] uppercase text-white/40 mb-14">Uma parceria estratégica:</p>
+<p class="font-headline text-xs font-bold tracking-[0.3em] uppercase text-white/40 mb-14" style="">Uma parceria estratégica:</p>
 <div class="flex flex-wrap justify-center items-center gap-12 md:gap-32 hover:grayscale-0 transition-all duration-700 opacity-80">
-<a class="h-12 md:h-16 inline-block transition-all duration-300 hover:opacity-100" href="https://www.alura.com.br/empresas" rel="noopener noreferrer" target="_blank">
-<img alt="Alura + FIAP" class="h-full w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/ADBb0uiNyHwvrLWiQmrvtYKLnIkFjp2HQy0j0C6Wr20QhLG_f2JNP7IJeTnTg12kVn3LgDCmIaQypIF4Bu1V1CBihI-SeUOBfBsIDX8KsgQd6zo2edcOC6dnEueksU2QHmcOqcvG-GMkGsvWPBso9to4L_aZPEQG8zXP2sM7ZJ0aN9exuekJWV6Segnmq3Fpl64zhAysdxUTznG7NYt6iHp_xMt1cBvWt7nNxwnvOAui5JQ7F3T0Hr1qYHxvr3SIGI6PiwgNcE-QTAbSaA"/>
-</a>
-<a class="h-12 md:h-16 inline-block transition-all duration-300 hover:opacity-100" href="https://www.sef.sc.gov.br/noticias/profisco-ii-governo-de-sc-avanca-mais-uma-etapa-para-obter-emprestimo-de-u-50-milhoes-junto-ao-bid" rel="noopener noreferrer" target="_blank">
-<img alt="Profisco" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugMzMPk3AKEht1ZyvtRyZ1zxisqSVYCRVvv05DTGBgl_h_VitVI_cHLPuWVdSm6RjfUjs2dNBwKFBoV2RGL86ZwPw-fMArNZUN3atNCn4gWAXZwjr0ZlZil4lmW60Xx1fcz38ekTCzIDLvPg2EooJUNSK2zQfFvRJiHIGA31SURuIp1CJyW5w_EtJsoJYxL53F0ScN5G31oMYUrzP45nDgoMn84muSWl40evWliw7bTdEcjpgxM53Nbe_u62DzOeRkIrs8oHsw_eQ"/>
-</a>
-<a class="h-12 md:h-16 inline-block transition-all duration-300 hover:opacity-100" href="https://www.sef.sc.gov.br" rel="noopener noreferrer" target="_blank">
-<img alt="SEF/SC" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhAYj9nKSyMDakGLgJV6Z3jCkBycr-xzwIHpLttAXzn7Z7VS_kCMT-G04NWs6D9EL5jkJ0QfPIqA4FhlzaRR3d-DJUoH75onF-6Oh7FBjpmFls-SngrKZCz7_5138ZC6xLXlxZBria23J0B_Yhmc2cYf0uE1NIAtXw3IrWJk2C_zSRPuSgvgfyT54bGT0AJKOa-0_CydgrGPe3431X2-HmpIBzVSgJOjMzsVQurzCrR_COyvCQgi6tIprT6M2RGqWBeyjrriWYl5g"/>
-</a>
+<a class="h-12 md:h-16 inline-block transition-all duration-300 hover:opacity-100" href="https://www.alura.com.br/empresas" rel="noopener noreferrer" style="" target="_blank"><img alt="Alura + FIAP" class="h-full w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/ADBb0uiNyHwvrLWiQmrvtYKLnIkFjp2HQy0j0C6Wr20QhLG_f2JNP7IJeTnTg12kVn3LgDCmIaQypIF4Bu1V1CBihI-SeUOBfBsIDX8KsgQd6zo2edcOC6dnEueksU2QHmcOqcvG-GMkGsvWPBso9to4L_aZPEQG8zXP2sM7ZJ0aN9exuekJWV6Segnmq3Fpl64zhAysdxUTznG7NYt6iHp_xMt1cBvWt7nNxwnvOAui5JQ7F3T0Hr1qYHxvr3SIGI6PiwgNcE-QTAbSaA" style=""></a>
+<a class="h-12 md:h-16 inline-block transition-all duration-300 hover:opacity-100" href="https://www.sef.sc.gov.br/noticias/profisco-ii-governo-de-sc-avanca-mais-uma-etapa-para-obter-emprestimo-de-u-50-milhoes-junto-ao-bid" rel="noopener noreferrer" style="" target="_blank"><img alt="Profisco" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugMzMPk3AKEht1ZyvtRyZ1zxisqSVYCRVvv05DTGBgl_h_VitVI_cHLPuWVdSm6RjfUjs2dNBwKFBoV2RGL86ZwPw-fMArNZUN3atNCn4gWAXZwjr0ZlZil4lmW60Xx1fcz38ekTCzIDLvPg2EooJUNSK2zQfFvRJiHIGA31SURuIp1CJyW5w_EtJsoJYxL53F0ScN5G31oMYUrzP45nDgoMn84muSWl40evWliw7bTdEcjpgxM53Nbe_u62DzOeRkIrs8oHsw_eQ" style=""></a>
+<a class="h-12 md:h-16 inline-block transition-all duration-300 hover:opacity-100" href="https://www.sef.sc.gov.br" rel="noopener noreferrer" style="" target="_blank"><img alt="SEF/SC" class="h-full w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhAYj9nKSyMDakGLgJV6Z3jCkBycr-xzwIHpLttAXzn7Z7VS_kCMT-G04NWs6D9EL5jkJ0QfPIqA4FhlzaRR3d-DJUoH75onF-6Oh7FBjpmFls-SngrKZCz7_5138ZC6xLXlxZBria23J0B_Yhmc2cYf0uE1NIAtXw3IrWJk2C_zSRPuSgvgfyT54bGT0AJKOa-0_CydgrGPe3431X2-HmpIBzVSgJOjMzsVQurzCrR_COyvCQgi6tIprT6M2RGqWBeyjrriWYl5g" style=""></a>
 </div>
 </div>
 </section>
 <!-- Main Content with Stacking Effects -->
 <div class="parallax-wrap">
 <!-- About Section -->
-<section class="py-32 bg-surface section-reveal" id="sobre">
+<section class="py-32 bg-surface section-reveal visible" id="sobre">
 <div class="max-w-7xl mx-auto px-8">
 <div class="grid md:grid-cols-2 gap-24 items-center">
 <div class="relative group">
 <div class="absolute -inset-4 bg-primary/5 rounded-[2.5rem] blur-3xl group-hover:bg-primary/10 transition-colors"></div>
-<img alt="Colaboração Profissional" class="rounded-[2.5rem] shadow-2xl relative z-10 w-full aspect-[4/3] object-cover border border-outline-variant/10" src="https://lh3.googleusercontent.com/aida/ADBb0ugtDMnBufwayBvN64j0hvc1uOIOplx2XVe6daKvkYOH72WQ5zRd2uU9Y7s2XUzF45gUUNUJL3Zq6QXtGIsjUy6WUy921njKPttE5RsRqnbDHJwOi4UrEds_SsWg7ubI1p2_cz1eWwkfQXv-OHFyJRdQHfZFCr0gv2B3NsAJAfJ-sifJHFwgtBCarYSU3KNAsp-yMJEEHHxad2lBtMNOCamIE8oUGaGv9hJLysq2UOT8BJgaf4DEge7swiBsBb1A5ljaZDQwNPexTg"/>
+<img alt="Colaboração Profissional" class="rounded-[2.5rem] shadow-2xl relative z-10 w-full aspect-[4/3] object-cover border border-outline-variant/10" src="https://lh3.googleusercontent.com/aida/ADBb0ugtDMnBufwayBvN64j0hvc1uOIOplx2XVe6daKvkYOH72WQ5zRd2uU9Y7s2XUzF45gUUNUJL3Zq6QXtGIsjUy6WUy921njKPttE5RsRqnbDHJwOi4UrEds_SsWg7ubI1p2_cz1eWwkfQXv-OHFyJRdQHfZFCr0gv2B3NsAJAfJ-sifJHFwgtBCarYSU3KNAsp-yMJEEHHxad2lBtMNOCamIE8oUGaGv9hJLysq2UOT8BJgaf4DEge7swiBsBb1A5ljaZDQwNPexTg" style="">
 <div class="absolute -bottom-8 -right-8 bg-white rounded-3xl shadow-2xl z-20 border border-outline-variant/10 p-10 max-w-[260px] flex flex-col items-center justify-center text-center">
-<span class="text-6xl font-extrabold text-primary block mb-2">+20h</span>
-<p class="text-on-surface-variant text-xs font-black uppercase tracking-widest leading-tight text-center">Carga Horária com Certificação</p>
+<span class="text-6xl font-extrabold text-primary block mb-2" style="">+30h</span>
+<p class="text-on-surface-variant text-xs font-black uppercase tracking-widest leading-tight text-center" style="">Carga Horária com Certificação</p>
 </div>
 </div>
 <div class="space-y-10">
-<h2 class="font-headline text-4xl md:text-6xl font-extrabold text-on-surface leading-tight tracking-tighter">
-                        Transforme dados em <span class="text-primary">inteligência</span> estratégica.
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold text-on-surface leading-tight tracking-tighter" style="">
+                        Transforme dados em <span class="text-primary" style="">inteligência</span> estratégica.
                     </h2>
-<p class="text-xl text-on-surface-variant leading-relaxed font-light">
+<p class="text-xl text-on-surface-variant leading-relaxed font-light" style="">
                         Desenvolva competências em IA Generativa, ChatGPT, automação e análise de dados aplicadas diretamente ao contexto fazendário. Nossa metodologia foca em resultados práticos para a gestão pública.
                     </p>
 <ul class="space-y-6">
-<li class="flex items-center gap-5 text-on-surface group">
-<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg group-hover:scale-110 transition-transform">check_circle</span>
-<span class="text-lg font-medium">IA Generativa para produtividade</span>
+<li class="flex items-center gap-5 text-on-surface group" style="">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg group-hover:scale-110 transition-transform" style="">check_circle</span>
+<span class="text-lg font-medium" style="">IA Generativa para produtividade</span>
 </li>
-<li class="flex items-center gap-5 text-on-surface group">
-<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg group-hover:scale-110 transition-transform">check_circle</span>
-<span class="text-lg font-medium">Automação de processos rotineiros</span>
+<li class="flex items-center gap-5 text-on-surface group" style="">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg group-hover:scale-110 transition-transform" style="">check_circle</span>
+<span class="text-lg font-medium" style="">Automação de processos rotineiros</span>
 </li>
-<li class="flex items-center gap-5 text-on-surface group">
-<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg group-hover:scale-110 transition-transform">check_circle</span>
-<span class="text-lg font-medium">Análise preditiva de arrecadação</span>
+<li class="flex items-center gap-5 text-on-surface group" style="">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg group-hover:scale-110 transition-transform" style="">check_circle</span>
+<span class="text-lg font-medium" style="">Análise preditiva de arrecadação</span>
 </li>
 </ul>
 </div>
@@ -288,11 +273,11 @@
 </div>
 </section>
 <!-- Tracks Section -->
-<section class="py-32 bg-surface-container-low section-reveal" id="trilhas">
+<section class="py-32 bg-surface-container-low section-reveal visible" id="trilhas">
 <div class="max-w-7xl mx-auto px-8">
 <div class="text-center mb-24 space-y-6">
-<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter">Escolha sua Trilha de Especialização</h2>
-<p class="text-on-surface-variant text-xl max-w-2xl mx-auto font-light">Capacitação modular desenhada para diferentes níveis de senioridade e áreas de atuação.</p>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter" style="">Escolha sua Trilha de Especialização</h2>
+<p class="text-on-surface-variant text-xl max-w-2xl mx-auto font-light" style="">Uma Jornada Híbrida - encontros ao vivo + trilha complementar na Alura</p>
 </div>
 <div class="grid md:grid-cols-2 gap-12">
 <!-- Card 1 -->
@@ -300,127 +285,123 @@
 <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-secondary/10 transition-colors"></div>
 <div class="flex justify-between items-start mb-12">
 <div class="p-5 bg-secondary-container/20 rounded-2xl group-hover:scale-110 transition-transform duration-500">
-<span class="material-symbols-outlined text-secondary text-5xl">visibility</span>
+<span class="material-symbols-outlined text-secondary text-5xl" style="">visibility</span>
 </div>
-<span class="bg-secondary-container/10 text-secondary px-5 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-secondary-container/20">Nível 1</span>
+<span class="bg-secondary-container/10 text-secondary px-5 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-secondary-container/20" style="">Nível 1</span>
 </div>
-<h3 class="text-4xl font-extrabold mb-6 tracking-tight">Consciente</h3>
-<p class="text-on-surface-variant text-lg mb-10 min-h-[90px] font-light leading-relaxed">Focado em democratizar o uso da IA para todos os servidores. Introdução prática ao ChatGPT, ética digital e produtividade diária.</p>
+<h3 class="text-4xl font-extrabold mb-6 tracking-tight" style="">CONSCIENTE - trilha aberta</h3>
+<p class="text-on-surface-variant text-lg mb-10 min-h-[90px] font-light leading-relaxed" style="">Focado em democratizar o uso da IA para servidores públicos, com introdução prática ao ChatGPT, ética digital e produtividade diária.</p>
 <div class="flex items-center gap-8 mb-12 text-sm font-bold text-on-surface/60 uppercase tracking-widest">
-<div class="flex items-center gap-2.5">
-<span class="material-symbols-outlined text-primary">group</span>
+<div class="flex items-center gap-2.5" style="">
+<span class="material-symbols-outlined text-primary" style="">group</span>
                             1.000 Vagas
                         </div>
-<div class="flex items-center gap-2.5">
-<span class="material-symbols-outlined text-primary">verified</span>
+<div class="flex items-center gap-2.5" style="">
+<span class="material-symbols-outlined text-primary" style="">verified</span>
                             Certificado FIAP
                         </div>
 </div>
-<a class="w-full py-5 border-2 border-primary text-primary rounded-2xl font-bold text-lg hover:bg-primary hover:text-white transition-all transform group-hover:-translate-y-1 text-center inline-block" href="https://forms.gle/CAXYPw95YWwppLpp8" target="_blank">
+<a class="w-full py-5 border-2 border-primary-container text-primary-container rounded-2xl font-bold text-lg hover:bg-primary-container hover:text-white transition-all transform group-hover:-translate-y-1 text-center inline-block" href="https://forms.gle/CAXYPw95YWwppLpp8" style="" target="_blank">
                         Inscrever-se na Trilha Consciente
                     </a>
 </div>
 <!-- Card 2 -->
 <div class="bg-white p-12 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-outline-variant/10 group relative overflow-hidden">
-<div class="absolute top-0 right-0 bg-primary text-white px-8 py-3 rounded-bl-3xl text-xs font-black tracking-widest">INÍCIO EM JUNHO</div>
+<div class="absolute top-0 right-0 bg-primary-container text-white px-8 py-3 rounded-bl-3xl text-xs font-black tracking-widest" style="">INDICAÇÃO/CONVITE</div>
 <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-primary/10 transition-colors"></div>
 <div class="flex justify-between items-start mb-12">
 <div class="p-5 bg-primary-container/20 rounded-2xl group-hover:scale-110 transition-transform duration-500">
-<span class="material-symbols-outlined text-primary text-5xl">rocket_launch</span>
+<span class="material-symbols-outlined text-primary text-5xl" style="">rocket_launch</span>
 </div>
-<span class="bg-primary-container/10 text-primary px-5 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-primary-container/20">Nível 2</span>
+<span class="bg-primary-container/10 text-primary px-5 py-1.5 rounded-full text-[10px] font-black uppercase tracking-[0.2em] border border-primary-container/20" style="">Nível 2</span>
 </div>
-<h3 class="text-4xl font-extrabold mb-6 tracking-tight">Emergente</h3>
-<p class="text-on-surface-variant text-lg mb-10 min-h-[90px] font-light leading-relaxed">Aprofundamento estratégico em Machine Learning e análise avançada de dados (No/Low Code) para tomada de decisão baseada em dados.</p>
+<h3 class="text-4xl font-extrabold mb-6 tracking-tight" style="">EMERGENTE - trilha seletiva</h3>
+<p class="text-on-surface-variant text-lg mb-10 min-h-[90px] font-light leading-relaxed" style="">Turma avançada com participação por indicação convite. Voltada a servidores selecionados, com foco a aplicações avancadas ( dados, automação e uso estratégico)</p>
 <div class="flex items-center gap-8 mb-12 text-sm font-bold text-on-surface/60 uppercase tracking-widest">
-<div class="flex items-center gap-2.5">
-<span class="material-symbols-outlined text-primary">group</span>
+<div class="flex items-center gap-2.5" style=""><span class="material-symbols-outlined text-primary" style="">group</span>
                             40 Vagas
                         </div>
-<div class="flex items-center gap-2.5">
-<span class="material-symbols-outlined text-primary">verified</span>
+<div class="flex items-center gap-2.5" style=""><span class="material-symbols-outlined text-primary" style="">verified</span>
                             Certificado FIAP
                         </div>
 </div>
-<a class="w-full py-5 bg-primary text-white rounded-2xl font-bold text-lg shadow-xl shadow-primary/20 hover:bg-primary-container hover:-translate-y-1 transition-all text-center inline-block" href="https://forms.gle/CAXYPw95YWwppLpp8" target="_blank">
-                        Inscrever-se na Trilha Emergente
+<a class="w-full py-5 bg-primary text-white rounded-2xl font-bold text-lg shadow-xl shadow-primary/20 hover:bg-primary-container hover:-translate-y-1 transition-all text-center inline-block" href="#faq-emergente" style="" target="_blank">Saiba Mais sobre a Trilha Emergente
                     </a>
 </div>
 </div>
 </div>
 </section>
 <!-- Schedule Section -->
-<section class="py-32 bg-surface section-reveal" id="calendario">
+<section class="py-32 bg-surface section-reveal visible" id="calendario">
 <div class="max-w-7xl mx-auto px-8">
 <div class="bg-[#0d1117] p-12 md:p-24 rounded-[3.5rem] text-white relative overflow-hidden group">
 <div class="absolute inset-0 opacity-40 pointer-events-none z-0">
-<img alt="Background Visual" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujOOORX6jy8Xn0KXn-yvFKV5ho3oH6J34OCfhqy6AOpqsSmXIp0DBw7kkDycY9vPpHLGaTTE6buElbPPvtDu7F_YIYT1DGb0RfxqKRBE4NufQWuxN9f3MaQhanAcgBev6db_FOSKeptPNGUUHmvehIT7-9uwrwvdM3CU0BeFAYCuI3lyZSokQS6UKW-3k797OYs9CrGAvUxRU5qDgdwGedn5JpeAdcmTFqm3oaiZIwIu958mI7kgMJz30ejFwQkWZpBcsZTfyKJ"/>
+<img alt="Background Visual" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujOOORX6jy8Xn0KXn-yvFKV5ho3oH6J34OCfhqy6AOpqsSmXIp0DBw7kkDycY9vPpHLGaTTE6buElbPPvtDu7F_YIYT1DGb0RfxqKRBE4NufQWuxN9f3MaQhanAcgBev6db_FOSKeptPNGUUHmvehIT7-9uwrwvdM3CU0BeFAYCuI3lyZSokQS6UKW-3k797OYs9CrGAvUxRU5qDgdwGedn5JpeAdcmTFqm3oaiZIwIu958mI7kgMJz30ejFwQkWZpBcsZTfyKJ" style="">
 <div class="absolute inset-0 bg-[#0d1117]/60"></div>
 </div>
 <div class="relative z-10 grid md:grid-cols-2 gap-20 items-center">
 <div class="space-y-10">
-<h2 class="font-headline text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter">Organize sua agenda para <div>o futuro.</div></h2>
+<h2 class="font-headline text-4xl md:text-6xl font-extrabold leading-tight tracking-tighter" style="">Organize sua agenda para&nbsp;<div class="" style="">o futuro.</div></h2>
 <div class="grid grid-cols-1 gap-8">
 <div class="flex items-center gap-8 bg-white/5 p-8 rounded-3xl backdrop-blur-xl border border-white/10 hover:bg-white/20 transition-colors">
-<span class="material-symbols-outlined text-primary-fixed text-5xl">calendar_month</span>
+<span class="material-symbols-outlined text-primary-fixed text-5xl" style="">calendar_month</span>
 <div>
-<p class="text-white/40 text-xs font-black uppercase tracking-[0.2em] mb-1">Início das Aulas - nível 1</p>
-<p class="text-2xl font-bold">04 de maio de 2026</p>
+<p class="text-white/40 text-xs font-black uppercase tracking-[0.2em] mb-1" style="">Início das Aulas - nível 1</p>
+<p class="text-2xl font-bold" style="">04 de maio de 2026</p>
 </div>
 </div>
 <div class="flex items-center gap-8 bg-white/5 p-8 rounded-3xl backdrop-blur-xl border border-white/10 hover:bg-white/20 transition-colors">
-<span class="material-symbols-outlined text-primary-fixed text-5xl">schedule</span>
+<span class="material-symbols-outlined text-primary-fixed text-5xl" style="">schedule</span>
 <div>
-<p class="text-white/40 text-xs font-black uppercase tracking-[0.2em] mb-1">Frequência</p>
-<p class="text-2xl font-bold">3x por semana (Seg/Qua/Sex)</p>
+<p class="text-white/40 text-xs font-black uppercase tracking-[0.2em] mb-1" style="">Frequência</p>
+<p class="text-2xl font-bold" style="">aulas período manhã (Seg/Qua/Sex)</p>
 </div>
 </div>
 </div>
 </div>
 <div class="space-y-10">
-<div class="bg-primary/90 backdrop-blur-xl p-10 rounded-[2.5rem] shadow-2xl border border-white/20">
-<h4 class="text-3xl font-extrabold mb-6 tracking-tight">Modalidade Híbrida</h4>
-<p class="text-white/80 text-lg leading-relaxed mb-8 font-light">Aulas síncronas via Google Meet com suporte assíncrono na plataforma Alura.</p>
+<div class="bg-primary-container/70 backdrop-blur-xl p-10 rounded-[2.5rem] shadow-2xl border border-white/20">
+<h4 class="text-3xl font-extrabold mb-6 tracking-tight" style="">Modalidade Híbrida</h4>
+<p class="text-white/80 text-lg leading-relaxed mb-8 font-light" style="">Aulas síncronas via Google Meet com suporte assíncrono na plataforma Alura.</p>
 <div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-xl inline-flex">
-<span class="material-symbols-outlined">video_camera_front</span>
-<span class="font-bold uppercase text-xs tracking-widest">Sessões Interativas ao Vivo</span>
+<span class="material-symbols-outlined" style="">video_camera_front</span>
+<span class="font-bold uppercase text-xs tracking-widest" style="">Sessões Interativas ao Vivo</span>
 </div>
 </div>
-<p class="text-white/30 text-sm font-medium">      Inscrições abertas até 28 de abril ou enquanto durarem as vagas.</p>
+<p class="text-white/30 text-sm font-medium" style="">&nbsp; &nbsp; &nbsp; Inscrições abertas até 28 de abril ou enquanto durarem as vagas.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- FAQ Section -->
-<section class="py-32 bg-surface-container-low section-reveal" id="faq">
+<section class="py-32 bg-surface-container-low section-reveal visible" id="faq">
 <div class="max-w-4xl mx-auto px-8">
-<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-center mb-20 tracking-tighter">Perguntas Frequentes</h2>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-center mb-20 tracking-tighter" style="">Perguntas Frequentes</h2>
 <div class="space-y-6">
 <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-outline-variant/10 group cursor-pointer hover:shadow-xl transition-all">
 <div class="flex justify-between items-center w-full text-left">
-<span class="text-xl font-bold tracking-tight">Quem pode participar da Jornada?</span>
-<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+<span class="text-xl font-bold tracking-tight" style="">Quem pode participar da Jornada?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform duration-300" style="">expand_more</span>
 </div>
-<div class="mt-6 text-on-surface-variant leading-relaxed text-lg font-light">
-                        A capacitação é exclusiva para servidores ativos da Secretaria de Estado da Fazenda de Santa Catarina (SEF/SC), finaceiros, fiscais e administrativos de demais Secretarias do Estado.</div>
+<div class="mt-6 text-on-surface-variant leading-relaxed text-lg font-light" style="">
+                        A capacitação é exclusiva para servidores ativos da SEF/SC e a servidores dos órgãos participantes do programa PROFISCO II (CGE, SEA, SEPLAN e PGE). Havendo vagas remanescentes, as inscrições poderão ser abertas a servidores das demais secretarias.</div>
+</div>
+<div class="bg-white p-10 rounded-[2rem] shadow-sm border border-outline-variant/10 group cursor-pointer hover:shadow-xl transition-all" id="faq-emergente">
+<div class="flex justify-between items-center w-full text-left">
+<span class="text-xl font-bold tracking-tight" style=""><span style="caret-color: rgb(34, 34, 34); color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: inherit; font-weight: inherit; letter-spacing: normal;" class="">Como funciona o Nível Emergente (40 vagas)?</span></span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform duration-300" style="">expand_more</span>
+</div>
+<div class="mt-6 text-on-surface-variant leading-relaxed text-lg font-light" style="">
+                        O Nível Emergente é uma turma avancada com participação <strong style="caret-color: rgb(34, 34, 34); color: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif;">por indicação/convite, com distribuição de vagas por instituição e validação pela organização do programa.&nbsp;</strong><div class="" style="">A confirmação será enviada por e-mail aos indicados.</div></div>
 </div>
 <div class="bg-white p-10 rounded-[2rem] shadow-sm border border-outline-variant/10 group cursor-pointer hover:shadow-xl transition-all">
 <div class="flex justify-between items-center w-full text-left">
-<span class="text-xl font-bold tracking-tight">Qual o custo da capacitação?</span>
-<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+<span class="text-xl font-bold tracking-tight" style="">Como receberei meu certificado?</span>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform duration-300" style="">expand_more</span>
 </div>
-<div class="mt-6 text-on-surface-variant leading-relaxed text-lg font-light">
-                        O curso é 100% gratuito para o servidor, sendo um investimento direto da SEF/SC no desenvolvimento do capital humano.
-                    </div>
-</div>
-<div class="bg-white p-10 rounded-[2rem] shadow-sm border border-outline-variant/10 group cursor-pointer hover:shadow-xl transition-all">
-<div class="flex justify-between items-center w-full text-left">
-<span class="text-xl font-bold tracking-tight">Como receberei meu certificado?</span>
-<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform duration-300">expand_more</span>
-</div>
-<div class="mt-6 text-on-surface-variant leading-relaxed text-lg font-light">
-                        Ao concluir 75% da carga horária e as atividades propostas, você receberá um certificado digital co-assinado pela Alura e FIAP, reconhecido nacionalmente.
+<div class="mt-6 text-on-surface-variant leading-relaxed text-lg font-light" style="">
+                        Ao concluir 75% da carga horária e as atividades propostas, você receberá um certificado digital co-assinado pela Alura e FIAP, com reconhecimento nacional.
                     </div>
 </div>
 </div>
@@ -431,52 +412,48 @@
 <footer class="bg-on-surface text-white w-full rounded-t-[3.5rem] mt-20 relative z-30">
 <div class="flex flex-col md:flex-row justify-between items-start md:items-center px-12 py-24 gap-12 max-w-7xl mx-auto">
 <div class="space-y-6">
-<a class="inline-block hover:opacity-80 transition-opacity" href="https://www.sef.sc.gov.br" target="_blank">
-<img alt="Logo SEF/SC" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiDxyBK7evUd_ipHgoCO1lqFu-909916uPcK5y5kBw9iax9OhhszIGo7xtUfqzRpAxp7Qd35XLKEY25Ct_WSGdyTJKpSN209yL-8BDokmQiz5wrTOaE9h2JuaA_ZBgLYdWgON--hDErYqWmKwHj0Dx0a2tL3IDa8uBct1GB5GAny32A3CmYg4I9fG3HKbObxRei_MsPZaU10N3JVEu0exb6PBxONcrKml_T-ha9iL7VkmD6_pdD29KMW7xKUAylH84xVmD3As8gqQ"/>
-</a>
-<p class="text-white/50 text-lg max-w-sm font-light leading-relaxed">Desenvolvendo a excelência na gestão pública através da tecnologia e inteligência artificial.</p>
-<p class="text-white/30 text-sm font-medium">© 2026 Diretoria do Tesouro - SEF/SC</p>
+<img alt="Logo SEF/SC" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiDxyBK7evUd_ipHgoCO1lqFu-909916uPcK5y5kBw9iax9OhhszIGo7xtUfqzRpAxp7Qd35XLKEY25Ct_WSGdyTJKpSN209yL-8BDokmQiz5wrTOaE9h2JuaA_ZBgLYdWgON--hDErYqWmKwHj0Dx0a2tL3IDa8uBct1GB5GAny32A3CmYg4I9fG3HKbObxRei_MsPZaU10N3JVEu0exb6PBxONcrKml_T-ha9iL7VkmD6_pdD29KMW7xKUAylH84xVmD3As8gqQ" style="height: 48px; width: auto; object-fit: contain;">
+<p class="text-white/50 text-lg max-w-sm font-light leading-relaxed" style="">Desenvolvendo a excelência na gestão pública através da tecnologia e inteligência artificial.</p>
+<p class="text-white/30 text-sm font-medium" style="">© 2026 &nbsp;Diretoria do &nbsp;Tesouro - SEF/SC</p>
 </div>
 <div class="flex gap-6">
-<a class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all group" href="https://api.whatsapp.com/send?text=Confira este site: https://sua-url-aqui.github.io/" target="_blank">
-<span class="material-symbols-outlined group-hover:scale-110 transition-transform">share</span>
+<a class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all group" href="https://api.whatsapp.com/send?text=Confira este site: https://sua-url-aqui.github.io/" style="" target="_blank">
+<span class="material-symbols-outlined group-hover:scale-110 transition-transform" style="">share</span>
 </a>
-<a class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all group" href="mailto:cursos.dite@sef.sc.gov.br">
-<span class="material-symbols-outlined group-hover:scale-110 transition-transform">mail</span>
-</a>
+<a class="w-14 h-14 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all group" href="mailto:cursos.dite@sef.sc.gov.br" style=""><span class="material-symbols-outlined group-hover:scale-110 transition-transform" style="">mail</span></a>
 </div>
 </div>
 </footer>
+<!-- Animation Logic Script -->
 <script>
-    // Particle Generator
     function initParticles() {
         const container = document.getElementById('particles-container');
         if (!container) return;
         
         container.innerHTML = '';
-        const particleCount = 100;
+        const particleCount = 120; 
 
         for (let i = 0; i < particleCount; i++) {
             const particle = document.createElement('div');
             particle.className = 'particle';
             
-            const size = Math.random() * 3 + 1;
+            const size = Math.random() * 4 + 1.5;
             const left = Math.random() * 100;
             const duration = Math.random() * 10 + 10;
             const delay = Math.random() * -20;
-            const drift = (Math.random() - 0.5) * 150;
+            const drift = (Math.random() - 0.5) * 200; 
             
             particle.style.width = `${size}px`;
             particle.style.height = `${size}px`;
             particle.style.left = `${left}%`;
-            particle.style.bottom = `-10%`;
+            particle.style.bottom = `-10px`; // Positioned at the bottom
             particle.style.setProperty('--duration', `${duration}s`);
             particle.style.setProperty('--drift', `${drift}px`);
             particle.style.animationDelay = `${delay}s`;
             
-            // Pure white for high contrast
-            particle.style.backgroundColor = '#ffffff';
-            particle.style.boxShadow = '0 0 8px rgba(255, 255, 255, 0.8)';
+            // Ensure color is light lilac as requested
+            particle.style.backgroundColor = '#e7e3f3';
+            particle.style.boxShadow = '0 0 6px rgba(231, 227, 243, 0.4)';
 
             container.appendChild(particle);
         }
@@ -491,7 +468,6 @@
         });
     }
 
-    // Scroll Reveal Observer
     const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -501,7 +477,6 @@
         });
     }, observerOptions);
 
-    // Navbar Effect
     window.addEventListener('scroll', () => {
         const nav = document.querySelector('nav');
         if (window.scrollY > 50) {
