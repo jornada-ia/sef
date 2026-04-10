@@ -4,83 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Jornada de Inteligência Artificial SEF/SC</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries">
-    // Parallax Enhanced Particle Generator
-    function initParticles() {
-        const container = document.getElementById('particles-container');
-        if (!container) return;
-        
-        container.innerHTML = '';
-        const particleCount = 120; // High density for visual impact
-
-        for (let i = 0; i < particleCount; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            
-            const size = Math.random() * 4 + 1.5;
-            const left = Math.random() * 100;
-            const duration = Math.random() * 10 + 10;
-            const delay = Math.random() * -20;
-            const drift = (Math.random() - 0.5) * 200; // Drift in pixels
-            
-            // Set styles
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.left = `${left}%`;
-            particle.style.bottom = `-10%`;
-            particle.style.setProperty('--duration', `${duration}s`);
-            particle.style.setProperty('--drift', `${drift}px`);
-            particle.style.animationDelay = `${delay}s`;
-            
-            // Set particle color to #00BEC6 with high visibility
-            particle.style.backgroundColor = '#00BEC6';
-            particle.style.boxShadow = '0 0 8px rgba(0, 190, 198, 0.6)';
-
-            container.appendChild(particle);
-        }
-
-        // Simple Parallax Effect on Scroll
-        window.addEventListener('scroll', () => {
-            const scrolled = window.scrollY;
-            const particles = document.querySelectorAll('.particle');
-            particles.forEach((p, idx) => {
-                const speed = 0.05 + (idx % 10) * 0.01;
-                p.style.transform = `translateY(${scrolled * speed}px)`;
-            });
-        });
-    }
-
-    // Scroll Reveal Intersection Observer
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-
-    // Navbar Scroll Effect
-    window.addEventListener('scroll', () => {
-        const nav = document.querySelector('nav');
-        if (window.scrollY > 50) {
-            nav.classList.add('py-2', 'shadow-xl');
-            nav.classList.remove('py-4');
-        } else {
-            nav.classList.remove('py-2', 'shadow-xl');
-            nav.classList.add('py-4');
-        }
-    });
-
-    // Initialize on load
-    document.addEventListener('DOMContentLoaded', () => {
-        initParticles();
-        document.querySelectorAll('.section-reveal').forEach(el => observer.observe(el));
-    });
-</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
@@ -192,7 +116,6 @@
 
         .particle {
             position: absolute;
-            background: #ffffff;
             border-radius: 50%;
             pointer-events: none;
             opacity: 0;
@@ -229,11 +152,6 @@
             position: relative;
             z-index: 10;
         }
-
-        .sticky-stack {
-            position: sticky;
-            top: 0;
-        }
         
         .no-line { border: none !important; }
         .tonal-depth { background-color: rgba(252, 249, 248, 0.8); backdrop-filter: blur(20px); }
@@ -241,8 +159,8 @@
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-white overflow-x-hidden">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-outline-variant/20 transition-all duration-300">
-<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-outline-variant/20 transition-all duration-300 py-4">
+<div class="flex justify-between items-center px-8 max-w-7xl mx-auto">
 <div class="tracking-tighter"><a class="flex items-center" href="https://www.sc.gov.br" target="_blank"><img alt="Logo SC.GOV.BR" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uim1rWaPVXXxUzhaDaDXwDg-PmANhlToOBz2lZ8EZE5_Dtc792TVmD-Z3CuAaFogqCzwuSuJt9bB8iyULV37iSud5nplAMCo7bbz8913tq9GwvFfRy2QvtaIKoCDYgPOW8DO7XOnur7UHJJ6TiFr426eNq4OrV6qdxrVI-rFSungksFprWr5W00BIjbwFpf5YWO3exRwqwnUuPXEsH_s0fk94k2_6HRO3MdD-qsthUhhKjsHLE66Mo8zf5euYhjH1gTUnhNXTpn"/></a></div>
 <div class="hidden md:flex items-center gap-8">
 <a class="font-headline text-sm font-bold tracking-wider uppercase text-on-surface hover:text-primary transition-colors" href="#sobre">Sobre</a>
@@ -301,7 +219,7 @@
 <div class="w-10 h-10 rounded-full border-2 border-[#0d1117] bg-surface-variant"></div>
 <div class="w-10 h-10 rounded-full border-2 border-[#0d1117] bg-primary"></div>
 <div class="w-10 h-10 rounded-full border-2 border-[#0d1117] bg-secondary"></div>
-<div class="w-10 h-10 rounded-full border-2 border-[#0d1117] bg-surface flex items-center justify-center text-[10px] font-bold">+1k</div>
+<div class="w-10 h-10 rounded-full border-2 border-[#0d1117] bg-white flex items-center justify-center text-[10px] font-bold text-on-surface">+1k</div>
 </div>
 <span class="text-white/40 text-xs font-bold uppercase tracking-widest">Vagas Limitadas</span>
 </div>
@@ -394,7 +312,7 @@
 </div>
 <!-- Card 2 -->
 <div class="bg-white p-12 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-outline-variant/10 group relative overflow-hidden">
-<div class="absolute top-0 right-0 bg-primary-container text-white px-8 py-3 rounded-bl-3xl text-xs font-black tracking-widest">INÍCIO EM JUNHO</div>
+<div class="absolute top-0 right-0 bg-primary-container text-white px-8 py-3 rounded-bl-3xl text-xs font-black tracking-widest uppercase">Início em Junho</div>
 <div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 blur-2xl group-hover:bg-primary/10 transition-colors"></div>
 <div class="flex justify-between items-start mb-12">
 <div class="p-5 bg-primary-container/20 rounded-2xl group-hover:scale-110 transition-transform duration-500">
@@ -501,7 +419,10 @@
 <footer class="bg-on-surface text-white w-full rounded-t-[3.5rem] mt-20 relative z-30">
 <div class="flex flex-col md:flex-row justify-between items-start md:items-center px-12 py-24 gap-12 max-w-7xl mx-auto">
 <div class="space-y-6">
-<a class="inline-block hover:opacity-80 transition-opacity" href="https://www.sef.sc.gov.br" target="_blank"><img alt="Logo SEF/SC" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uiDxyBK7evUd_ipHgoCO1lqFu-909916uPcK5y5kBw9iax9OhhszIGo7xtUfqzRpAxp7Qd35XLKEY25Ct_WSGdyTJKpSN209yL-8BDokmQiz5wrTOaE9h2JuaA_ZBgLYdWgON--hDErYqWmKwHj0Dx0a2tL3IDa8uBct1GB5GAny32A3CmYg4I9fG3HKbObxRei_MsPZaU10N3JVEu0exb6PBxONcrKml_T-ha9iL7VkmD6_pdD29KMW7xKUAylH84xVmD3As8gqQ" style="height: 48px; width: auto; object-fit: contain;"/></a>
+<a class="inline-block hover:opacity-80 transition-opacity" href="https://www.sef.sc.gov.br" target="_blank">
+<img alt="Logo SEF/SC" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhP6e9z-iK5j7Qe9w5R9Xf-3x-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f-f" style="display:none;"/>
+<img alt="Logo SEF/SC" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uhAYj9nKSyMDakGLgJV6Z3jCkBycr-xzwIHpLttAXzn7Z7VS_kCMT-G04NWs6D9EL5jkJ0QfPIqA4FhlzaRR3d-DJUoH75onF-6Oh7FBjpmFls-SngrKZCz7_5138ZC6xLXlxZBria23J0B_Yhmc2cYf0uE1NIAtXw3IrWJk2C_zSRPuSgvgfyT54bGT0AJKOa-0_CydgrGPe3431X2-HmpIBzVSgJOjMzsVQurzCrR_COyvCQgi6tIprT6M2RGqWBeyjrriWYl5g"/>
+</a>
 <p class="text-white/50 text-lg max-w-sm font-light leading-relaxed">Desenvolvendo a excelência na gestão pública através da tecnologia e inteligência artificial.</p>
 <p class="text-white/30 text-sm font-medium">© 2026  Diretoria do  Tesouro - SEF/SC</p>
 </div>
@@ -513,7 +434,6 @@
 </div>
 </div>
 </footer>
-<!-- Floating Action Button -->
 <script>
     // Parallax Enhanced Particle Generator
     function initParticles() {
@@ -522,6 +442,7 @@
         
         container.innerHTML = '';
         const particleCount = 120; // High density for visual impact
+        const colors = ['#e9d5ff', '#c084fc', '#a855f7', '#d8b4fe']; // Shades of lilac/purple
 
         for (let i = 0; i < particleCount; i++) {
             const particle = document.createElement('div');
@@ -532,6 +453,7 @@
             const duration = Math.random() * 10 + 10;
             const delay = Math.random() * -20;
             const drift = (Math.random() - 0.5) * 200; // Drift in pixels
+            const color = colors[Math.floor(Math.random() * colors.length)];
             
             // Set styles
             particle.style.width = `${size}px`;
@@ -542,9 +464,9 @@
             particle.style.setProperty('--drift', `${drift}px`);
             particle.style.animationDelay = `${delay}s`;
             
-            // Set particle color to #00BEC6 with high visibility
-            particle.style.backgroundColor = '#00BEC6';
-            particle.style.boxShadow = '0 0 8px rgba(0, 190, 198, 0.6)';
+            // Set particle color to brand lilacs
+            particle.style.backgroundColor = color;
+            particle.style.boxShadow = `0 0 8px ${color}66`;
 
             container.appendChild(particle);
         }
